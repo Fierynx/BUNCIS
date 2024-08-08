@@ -1,4 +1,4 @@
-# Update Corporate
+# Delete Corporate
 
 - Endpoint: `api/corporate/{corporateId}`
 - Method: `DELETE`
