@@ -20,14 +20,15 @@ class CorporateController extends Controller
     public function getCorporate()
     {
         $data = $this->corporateService->getCorporate();
-        return new DataResponse($data, ResponseCode::SUCCESS_CODE);
+        return new DataResponse($data);
     }
 
     public function getCorporateById($id)
     {
         $data = $this->corporateService->getCorporateById($id);
-        if($data){
-            return new DataResponse($data, ResponseCode::SUCCESS_CODE);
+        if($data){  
+            $data->load('pic');
+            return new DataResponse($data);
         }
         else{
             return new DataResponse('', ResponseCode::NOT_FOUND_CODE, ResponseMessage::NOT_FOUND_MESSAGE);
