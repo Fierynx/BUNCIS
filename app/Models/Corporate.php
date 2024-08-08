@@ -11,9 +11,9 @@ class Corporate extends Model
     use HasFactory;
 
     protected $fillable = [
-        'description',
+        'name',
         'date',
-        'details',
+        'description',
     ];
     public function pic(): HasMany
     {
