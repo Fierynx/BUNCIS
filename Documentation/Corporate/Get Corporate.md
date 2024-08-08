@@ -1,4 +1,4 @@
-# Update Corporate
+# Get Corporate
 
 - Endpoint: `api/corporate`
 - Method: `GET`
