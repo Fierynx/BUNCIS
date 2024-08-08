@@ -15,7 +15,6 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('contact');
-            $table->string('name');
             $table->enum('gender', ['Male', 'Female']);
             $table->string('position');
             $table->foreignId('CorporateId')->references('id')->on('corporates')->cascadeOnDelete()->cascadeOnUpdate();
