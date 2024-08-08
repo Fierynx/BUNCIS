@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Collaboration extends Model
 {
@@ -14,4 +15,9 @@ class Collaboration extends Model
         'date',
         'description',
     ];
+
+    public function picCollaboration(): HasMany
+    {
+        return $this->hasMany(Pic_Collaboration::class, 'CollaborationId');
+    }
 }
